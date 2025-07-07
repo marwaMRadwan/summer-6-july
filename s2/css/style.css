@@ -1,0 +1,201 @@
+/* h1{
+    color: red;
+} */
+/*
+#one{
+    color: red;
+}
+.c1{
+    color: blue;
+}
+    */
+/* 
+color name => red blue 
+hex color  #0f0895
+RGB   rgb(0,255,0)
+RGBA  rgba(0,255,0,0.5)
+*/
+/* text colors */
+/* p{ */
+    /* color: red; */
+    /* color: #f6f3ee; */
+    /* color: rgba(1, 22, 22, 0.336) */
+/* } */
+/* texxt alignment */
+/* p { */
+    /* center  left right*/
+    /* text-align: justify; */
+/* } */
+/* p{ */
+    /* color:red;
+    text-align:center; */
+
+    /* text transformation */
+    /* none, capitalize, uppercase, lowercase */
+    /* text-transform: capitalize; */
+    /* text spacing */
+/* rem  em   %  vh   wh  px */
+    /* text-indent: 2.5rem; */
+    /* letter-spacing: 10px; */
+    /* line-height: 200%; */
+    /* word-spacing: 20px; */
+    /* white space */
+    /* white-space: nowrap; */
+    /* shadow */
+    /* line-height: 3;
+    text-shadow: 0px 0px 15px red; */
+/* } */
+
+/* body{ */
+    /* direction */
+    /* ltr  rtl */
+    /* direction: rtl; */
+/* } */
+
+/* p{ */
+    /* overline underline line-through */
+    /* text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 5px; */
+    /* text-decoration: underline dotted blue 5px;
+    line-height: 2; */
+/* } */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap'); */
+
+/* fonts */
+/* p{ */
+    /* % px em rem small large */
+    /* font-size: 1.5rem;
+    line-height: 2; */
+    /*font-weight: 900; */ /*100 200 300 ..... 900  bold  bolder loighter normal*/
+    /* font-variant: small-caps;
+    font-style: italic;
+    font-family: "Roboto Slab", serif;
+} */
+/* body{
+    height: 7000px;
+} */
+/* div{ */
+    /* height: 400px; */
+    /* width:400px;
+    background: red; */
+    /* border-bottom: solid black 5px; */
+/* border-bottom-style: dashed;
+border-bottom-color: blueviolet;
+border-bottom-width: 7px; */
+    /* border-color: brown; */
+    /* border-style: solid;
+    border-width: 5px; */
+    /* border: blue solid 3px; */
+    /* border-left: solid blue  3px ;
+    border-right:dashed brown  5px ;
+    border-top:dotted red  15px ;
+    border-bottom: dotted black  7px;
+    outline: solid violet 10px;
+    outline-offset: 10px; */
+    /* background-color: violet; */
+    /* width: 50%; */
+    /* background-image: url(../images/product.webp);
+    background-size: 200px; /*cover contain*/
+    /* background-repeat: no-repeat;
+    background-attachment: fixed; /*scroll*/
+    /*
+    background-position: top left;
+    */
+    /* text-align: justify; */
+    /* padding-left: 15px;
+    padding-bottom: 2rem;
+    padding-right: 2%;
+    padding-top: 5%; */
+    /* padding: 5% ;
+    margin: 5% auto;
+}  */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f7e5bf;
+}
+
+.blue-bg{
+    background-color: #1132f5;
+}
+.text-center{
+    text-align: center;
+}
+.lg-font{
+    font-size: 2rem;
+}
+
+#main-card{
+    margin: 5% auto;
+    width:40%;
+    background-color: #282121;
+    border: solid #1132f5 3px;
+    border-radius: 20px;
+    padding: 3% 5% 5%;
+}
+
+#main-card h2{
+    margin-top: 7%;
+    color: white;
+}
+#add-form{
+    margin-top: 5%;
+}
+#add-form input{
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    padding: 5px;
+}
+#add-form button{
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 2%;
+}
+
+.card{
+    border: solid white 3px;
+    padding: 3%;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+.card span{
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 50%;
+}
+.card a{
+    text-decoration: none;
+    color: red;
+    font-size: large;
+    margin-right: 3%;
+}
+.card .selected{
+    color: gray;
+    text-decoration:line-through;
+}
+#main-card hr{
+    height: 3px;
+    border: none;
+    margin: 5% auto;
+}
+
+#main-card p{
+    font-size: large;
+    color: white;
+}
