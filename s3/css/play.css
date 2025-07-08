@@ -1,0 +1,17 @@
+div{
+    height: 500px;
+    background: red;
+    width: 40%;
+    margin-bottom: 5%;
+    display: inline-block;
+}
+/* img{
+    margin: 2%;
+    width: 40%;
+    padding: 2%;
+} */
+span{
+    margin: 3%;
+    width:40%;
+    padding: 5%;
+}
