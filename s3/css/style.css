@@ -127,6 +127,7 @@ input{
     width: 90%;
     margin-left:auto ;
     margin-right: auto;
+    display: flex;
 }
 .my-5{
     margin-top: 5%;
@@ -140,7 +141,7 @@ input{
     width: 20%;
 }
 .w-40{
-    width: 39.5%;
+    width: 40%;
 }
 .oragnge-bg{
     background-color: #ff8b38;
