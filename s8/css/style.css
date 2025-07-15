@@ -1,0 +1,23 @@
+.nav-link.active{
+    color: blue !important;;
+}
+
+.carousel-indicators button{
+    width: 20px!important;
+    height: 20px!important;
+}
+
+.carousel-indicators button.active{
+    background-color: red!important;
+}
+
+.carousel-indicators button{
+    background-color: aquamarine!important;
+}
+
+.carousel-item img{
+    height: 70vh;
+}
+body{
+    height: 5000px;
+}
