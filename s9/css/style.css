@@ -1,0 +1,43 @@
+/* body{
+    height: 10000px;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+}
+
+:root{
+    --lightPurple: #F3EBFF;
+    --darkPurple: #42307D;
+    --midPurple:#6941C6;
+}
+.mytext-light{
+    color: var(--lightPurple);
+}
+.mytext-dark{
+    color: var(--darkPurple);
+}
+.mytext-mid{
+    color: var(--midPurple);
+}
+.mybg-light{
+    background-color: var(--lightPurple);
+}
+.mybg-dark{
+    background-color: var(--darkPurple);
+}
+.mybg-mid{
+    background-color: var(--midPurple);
+}
+.rounded-circle {
+      aspect-ratio: 1/1;
+}
+.carousel-item img{
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+.carousel-indicators button{
+    width: 1rem!important;
+    height: 1rem!important;
+} */
+.rounded-circle {
+      aspect-ratio: 1/1;
+}
