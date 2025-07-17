@@ -1,0 +1,19 @@
+body{
+    height: 8000px;
+}
+.hero{
+    background-image: url(../../s9/images/image.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50% 100%;
+}
+.abs{
+    top: 70% ;;
+}
+
+@media (min-width:0px) and (max-width:900px){
+.abs{
+    top: 50% ;
+}
+}
