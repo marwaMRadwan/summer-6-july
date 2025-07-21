@@ -116,7 +116,7 @@
 // let a = [1], b=[9]
 // let c = a.concat(b)
 // console.log(a, b, c)
-let arr = [1,2,3,4,5,6,7, 4]
+// let arr = [1,2,3,4,5,6,7, 4]
 // arr.copyWithin(1,4)
 // console.log(arr)
 // const c = arr.splice(1,3)
@@ -133,7 +133,7 @@ let arr = [1,2,3,4,5,6,7, 4]
 // console.log(arr)
 
 
-let a = [1,2,3,4,5,6,7,4,2,3]
+// let a = [1,2,3,4,5,6,7,4,2,3]
 
 // let sum =0 
 // a.forEach(el=> {
@@ -185,65 +185,188 @@ let a = [1,2,3,4,5,6,7,4,2,3]
 //     {name:"", age:1},
 // ]
 
-let data = [
-    {
-        userId: 1,
-        id: 1,
-        title: "delectus aut autem",
-        completed: false
+// let data = [
+//     {
+//         userId: 1,
+//         id: 1,
+//         title: "delectus aut autem",
+//         completed: false
+//     },
+//     {
+//         userId: 1,
+//         id: 2,
+//         title: "quis ut nam facilis et officia qui",
+//         completed: false
+//     },
+//     {
+//         userId: 1,
+//         id: 3,
+//         title: "fugiat veniam minus",
+//         completed: false
+//     },
+//     {
+//         userId: 1,  
+//         id: 4,
+//         title: "et porro tempora",
+//         completed: true
+//     },
+//     {
+//         userId: 1,
+//         id: 5,
+//         title: "laboriosam mollitia et enim quasi adipisci quia provident illum",
+//         completed: false
+//     },
+//     {
+//         userId: 1,
+//         id: 6,
+//         title: "qui ullam ratione quibusdam voluptatem quia omnis",
+//         completed: false
+//     },
+//     {
+//         userId: 1,
+//         id: 7,
+//         title: "illo expedita consequatur quia in",
+//         completed: false
+//     },
+//     {
+//         userId: 1,
+//         id: 8,
+//         title: "quo adipisci enim quam ut ab",
+//         completed: true
+//     },
+//     {
+//         userId: 1,
+//         id: 9,
+//         title: "molestiae perspiciatis ipsa",
+//         completed: false
+//     },
+//     {
+//         userId: 1,
+//         id: 10,
+//         title: "illo est ratione doloremque quia maiores aut",
+//         completed: true
+//     }
+//     ]
+
+    // id = 5
+    // let a1 = data.find(el=> {
+    //     return el["id"] == 5
+    // })
+    // // id > 5
+    // let a2 = data.find(el=> {
+    //     return el["id"] > 5
+    // })
+
+    // // all includes letter
+    // let a3 = data.filter(el=> {
+    //     return el.title.includes("f")
+    // })
+
+    // //first include letter
+    //     let a4 = data.find(el=> {
+    //     return el.title.includes("f")
+    // })
+
+
+
+// function funName(userName){
+//     return (` hello ${userName}`)
+// }
+// console.log(funName("marwa"))
+// funName()
+// funName("Mohammed")
+
+
+// test()
+
+// function test(n=0){
+//     console.log(n)
+// }
+
+
+// self invoke function
+// (function(){
+//     console.log("test")
+// })()
+
+// m()
+
+// const m = function(){
+//     console.log("test")
+// }
+
+// arrow function
+
+
+// const m = () => {
+//     console.log(this)
+// }
+// m()
+
+
+// const tempConverter = function (temp = 0){
+//     return {
+//         tempInF : temp,
+//         tempInC: ( temp -32 ) * (5/9),
+//         tempInK : ( temp *55 ) - 390
+//     }
+// }
+
+// console.log(tempConverter(50))
+// let x=10
+// let user = {name:"marwa"}
+// const addData = function(userData, a){
+//     user.age = 40
+//     a = 20
+//     console.log(userData)
+// }
+
+// addData( user, x )
+
+// console.log(user, x)
+
+
+
+// let x = 5, y=10, z = {}
+
+// const change = function(x, y, ahmed){
+//     x=1
+//     y=2
+//     ahmed.name="ahmed"
+// }
+
+// change(x,y, z)
+// console.log(x,y, z)
+
+
+// const user = {}
+// user.name = "marwa"
+
+// const user = {
+//     name:"marwa", 
+//     age: 40,
+//     print: ()=>{
+//         console.log(this)
+//     }
+// }
+
+// user.print()
+
+const student = {
+  name: "ahmed",
+  age: 20,
+  sum:0,
+  grades: [20, 40, 60],
+  total: function(){
+        this.grades.forEach(element => {
+            this.sum += element
+        } ) 
     },
-    {
-        userId: 1,
-        id: 2,
-        title: "quis ut nam facilis et officia qui",
-        completed: false
-    },
-    {
-        userId: 1,
-        id: 3,
-        title: "fugiat veniam minus",
-        completed: false
-    },
-    {
-        userId: 1,  
-        id: 4,
-        title: "et porro tempora",
-        completed: true
-    },
-    {
-        userId: 1,
-        id: 5,
-        title: "laboriosam mollitia et enim quasi adipisci quia provident illum",
-        completed: false
-    },
-    {
-        userId: 1,
-        id: 6,
-        title: "qui ullam ratione quibusdam voluptatem quia omnis",
-        completed: false
-    },
-    {
-        userId: 1,
-        id: 7,
-        title: "illo expedita consequatur quia in",
-        completed: false
-    },
-    {
-        userId: 1,
-        id: 8,
-        title: "quo adipisci enim quam ut ab",
-        completed: true
-    },
-    {
-        userId: 1,
-        id: 9,
-        title: "molestiae perspiciatis ipsa",
-        completed: false
-    },
-    {
-        userId: 1,
-        id: 10,
-        title: "illo est ratione doloremque quia maiores aut",
-        completed: true
-    }
-    ]
+
+  print: function () {
+    this.total()
+    console.log(`Student ${this.name} has ${this.sum} grades`);
+  }
+};
+
+student.print();
