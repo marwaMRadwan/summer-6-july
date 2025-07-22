@@ -1,63 +1,4 @@
-
-
-// data.forEach(d=> console.log(d.name))
-
-// document.write("hello")
-
-// DOM => Document Object man.
-
-// let x = document.getElementsByTagName("div")
-// console.log(x[1])
-// x[1].textContent="hello there"
-
-// x = document.getElementsByClassName("bg-dark")
-// console.log(x)
-// x[0].textContent="hello there"
-
-// x = document.getElementById("one")
-// console.log(x)
-
-
-// querySelector
-// x = document.querySelectorAll("div")
-
-// const x = document.querySelector("#one")
-//innerText innerHTML textContent
-// x.textContent = "<h1>hello</h1>" 
-// x.textContent=x.className
-// x.className += " test"
-// console.log(x.classList)
-//add remove toggle
-// x.classList.toggle("col-md-4")
-// x.style.color = "red"
-
-
-
-//event
-// let myInput = document.querySelector("#test")
-// myInput.addEventListener("input", function(){
-//     console.log(this.value)
-// })
-
-// let btn = document.querySelector("#clickMe")
-// let div = document.querySelector("#myDiv")
-
-// btn.addEventListener("click", function(e){
-//     // console.log(e.target)
-//     // btn.innerText = "hide"
-//     btn.innerText == "show" ? btn.innerText="hide" : btn.innerText = "show"
-//     div.classList.toggle("d-none")
-// })
-
-// let myArea = document.querySelector("#myArea")
-// let newElement = document.createElement("p")
-// console.log(newElement)
-// myArea.appendChild(newElement)
-// newElement.textContent="hello"
-// newElement.className = "bg-dark text-white p-5"
-// newElement.setAttribute("title", "hello par")
-// newElement.setAttribute("id", "myID")
-const data = [
+let data = [
 {
 id: 1,
 name: "Leanne Graham",
@@ -289,46 +230,56 @@ bs: "target end-to-end models"
 }
 }
 ]
-const createMyOwnEle=function(parent, newElement, txt, href, classes){
-        let myEle =  document.createElement(newElement)
-        parent.appendChild(myEle)
-        if(classes) myEle.className=classes
-        if(txt) myEle.textContent = txt
-        if(href)myEle.href = 'http://' + href
-        return myEle
-}
-
+let result = data
 const myArea = document.querySelector("#myArea")
 const serKey = document.querySelector("#search")
-data.forEach(d=>{
 
-    // let div = document.createElement("div")
-    // div.className = "col-md-4 p-3"
-    // myArea.appendChild(div)
+const createMyOwnEle=function(parent, newElement, txt, href, classes){
+    let myEle =  document.createElement(newElement)
+    parent.appendChild(myEle)
+    if(classes) myEle.className=classes
+    if(txt) myEle.textContent = txt
+    if(href)myEle.href = 'http://' + href
+    return myEle
+}
 
-    // let innerDiv = document.createElement("div")
-    // innerDiv.className = "border p-3 border-2 border-danger rounded"
-    // div.appendChild(innerDiv)
-    
-    // let heading = document.createElement("h3")
-    // heading.textContent = d.name
-    // innerDiv.appendChild(heading)
-    
-    // heading = document.createElement("h4")
-    // heading.textContent = d.phone
-    // innerDiv.appendChild(heading)
-    
-    // heading = document.createElement("a")
-    // heading.textContent = "click to load"
-    // heading.href = 'http://' + d.website
-    // heading.className="btn btn-danger"
-    // innerDiv.appendChild(heading)
+const draw = function(){
+    myArea.innerHTML=""
+    result.forEach((d,i)=>{
+        let div = createMyOwnEle(myArea, "div", null, null, "col-md-4 p-3")
+        let innerDiv = createMyOwnEle(div, "div", null, null, "border p-3 border-2 border-danger rounded")
+        let heading = createMyOwnEle(innerDiv, "h3", d.name, null, null)
+        heading = createMyOwnEle(innerDiv, "h4", d.phone, null, null)
+        heading = createMyOwnEle(innerDiv, "a","click me" ,`http://${d.website}`, "btn btn-danger")
+        let btn  = createMyOwnEle(innerDiv, "button","delete" ,null , "ms-4 btn btn-danger")
+        btn.addEventListener("click", function(){
+            console.log(i)
+            data.splice(i,1)
+            result.splice(i,1)
+            draw()
+        })
+    })
+}
 
-    let div = createMyOwnEle(myArea, "div", null, null, "col-md-4 p-3")
-    let innerDiv = createMyOwnEle(div, "div", null, null, "border p-3 border-2 border-danger rounded")
-    let heading = createMyOwnEle(innerDiv, "h3", d.name, null, null)
-    heading = createMyOwnEle(innerDiv, "h4", d.phone, null, null)
-    heading = createMyOwnEle(innerDiv, "a","click me" ,`http://${d.website}`, "btn btn-danger")
-
+serKey.addEventListener("input", () => {
+    result = data.filter(el=>{
+        return el.name.includes(serKey.value)
+    })
+    draw()
 })
+
+draw()
+// const users = []
+// const myForm = document.querySelector("#myForm")
+// myForm.addEventListener("submit", function(e){
+//     e.preventDefault()
+//     const user = {
+//         name: myForm.name.value,
+//         age: myForm.age.value,
+//         email: myForm.email.value,
+//     }
+//     console.log(user)
+//     users.push(user)
+// })
+
 
