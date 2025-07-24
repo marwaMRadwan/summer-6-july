@@ -1,0 +1,17 @@
+.zoom-container{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+}
+.zoom-container img{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .1s ease;
+}
+
+.zoom-container:hover img{
+    transform: scale(2);
+}

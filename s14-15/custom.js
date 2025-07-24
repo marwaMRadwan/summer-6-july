@@ -62,3 +62,15 @@ addForm.addEventListener("submit", function(e){
     writeToStorage(allData)
     window.location.href = "index.html"
 })
+
+// const params = new URLSearchParams(window.location.search)
+    // console.log(params.get("id"));
+    // for( [ key, val ] of params){
+    //     console.log(key, " - " , val);
+    // }
+    // if(params.has("id")) console.log("fgf")
+    // const obj = Object.fromEntries(params)
+    // console.log(obj)
+    // {
+    //     key:"val",
+    // }
